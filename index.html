@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header styles */
+        .header {
+            background-color: #d1d1d1;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #aaa;
+        }
+        
+        /* Main content container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        /* Navigation */
+        .nav {
+            background-color: #ffdfba;
+            padding: 16px;
+            border: 1px solid #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Main content area */
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        /* Upper content row */
+        .upper-content {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .upper-left {
+            background-color: #808080;
+            color: white;
+            padding: 16px;
+            border: 1px solid #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .upper-center {
+            background-color: #ff0000;
+            color: white;
+            padding: 16px;
+            border: 1px solid #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .upper-right {
+            background-color: #e0e0e0;
+            padding: 16px;
+            border: 1px solid #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        /* Middle content */
+        .middle-content {
+            background-color: #5da9e9;
+            padding: 16px;
+            border: 1px solid #aaa;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        /* Lower content */
+        .lower-content {
+            background-color: #ff8c00;
+            padding: 16px;
+            border: 1px solid #aaa;
+            height: 128px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #d1d1d1;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #aaa;
+            position: sticky;
+            bottom: 0;
+        }
+        
+        /* Media query for desktop layout */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+            
+            .nav {
+                width: 192px;
+                flex-shrink: 0;
+            }
+            
+            .upper-content {
+                flex-direction: row;
+            }
+            
+            .upper-left,
+            .upper-center,
+            .upper-right {
+                width: 33.333%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Header</h1>
+    </header>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav">
+            <span>Nav</span>
+        </nav>
+        
+        <!-- Main Content Area -->
+        <main class="content">
+            <!-- Upper Content Row -->
+            <div class="upper-content">
+                <div class="upper-left">
+                    Upper Content<br>Left
+                </div>
+                <div class="upper-center">
+                    Upper Content<br>Center
+                </div>
+                <div class="upper-right">
+                    Upper Content<br>Right
+                </div>
+            </div>
+            
+            <!-- Middle Content -->
+            <div class="middle-content">
+                Middle Content
+            </div>
+            
+            <!-- Lower Content -->
+            <div class="lower-content">
+                Lower Content 2
+            </div>
+        </main>
+    </div>
+    
+    <!-- Sticky Footer -->
+    <footer class="footer">
+        Sticky Footer
+    </footer>
+</body>
+</html>
